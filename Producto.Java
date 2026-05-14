@@ -47,6 +47,7 @@ public class Producto{
      this.stock = stock;
    }
 
+   //@Override
    public String toString(){
 
         return "ID:" + id
