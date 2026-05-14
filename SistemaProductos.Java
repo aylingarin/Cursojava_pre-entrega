@@ -1,4 +1,5 @@
-import java.util.Scanner;   
+import java.util.Scanner;  
+
 public class SistemaProductos {
 
     public static void main(String[] args) {
@@ -67,7 +68,7 @@ public class SistemaProductos {
                     if(actualizar == 1){
                         
                         System.out.println("Nuevo precio: ");
-                        Bouble nuevoPrecio = scanner.nextBouble();
+                        double nuevoPrecio = scanner.nextDouble();
 
                         System.out.println("Nuevo stock: ");
                         int nuevoStock = scanner.nextInt();
@@ -79,6 +80,7 @@ public class SistemaProductos {
                   } catch (ProductoNoEncontrado | IllegalArgumentException e){
                 System.out.println("Error: " + e.getMessage());
                       }
+                      break;
 
             case 4: 
             try{
@@ -106,7 +108,9 @@ public class SistemaProductos {
                         
                         default:
                              System.out.println("opcion invalida.");
+            }
         }while(opcion != 7);
+        
         scanner.close();
 
         

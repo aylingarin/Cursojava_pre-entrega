@@ -15,7 +15,7 @@ public class LineaPedido{
         return cantidad;
     }
 
-    public Bouble calcularSubTotal(){
-        return Product.getPrecio * cantidad;
+    public double calcularSubTotal(){
+        return producto.getPrecio() * cantidad;
     }
 }

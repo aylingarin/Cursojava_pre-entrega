@@ -1,12 +1,12 @@
 public class Producto{
 
-    private static contadorId = 1;
+    private static int contadorId = 1;
     private String nombre;
-    private Int id;
-    private Bouble precio;
+    private int id;
+    private double precio;
     private int stock;
 
-    public Producto(Stringtring nombre, Bouble precio, int stock){
+    public Producto(String nombre, double precio, int stock){
         this.id = contadorId++;
         this.nombre = nombre; 
         this.precio = precio;
@@ -23,13 +23,13 @@ public class Producto{
     public int getStock(){
         return stock; 
     }
-    public Bouble getPrecio(){
+    public double getPrecio(){
         return precio; 
    }
 
    // setters 
 
-   public void setPrecio(Bouble precio){
+   public void setPrecio(double precio){
     if (precio < 0){
      throw new IllegalArgumentException(
         "El precio no puede ser negativo."

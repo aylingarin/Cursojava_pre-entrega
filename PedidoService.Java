@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.Scanner;
 public class PedidoService {
 
     private ArrayList<Pedido> pedidos = new ArrayList<>();
@@ -44,8 +46,7 @@ public class PedidoService {
                         producto.getStock() - cantidad
                 );
 
-                LineaPedido linea =
-                        new LineaPedido(producto, cantidad);
+                LineaPedido linea = new LineaPedido(producto, cantidad);
 
                 pedido.agregarLinea(linea);
 

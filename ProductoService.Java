@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 public class ProductoService{
     private ArrayList<Producto> productos = new ArrayList<>();
 
@@ -16,7 +17,7 @@ public class ProductoService{
         }
         System.out.println("Productos: ");
 
-        for(Producto p: producto){
+        for(Producto p: productos){
             System.out.println(p);
         }
     }
@@ -24,13 +25,13 @@ public class ProductoService{
     public Producto buscarPorId(int id){
         for (Producto p: productos){
             if (p.getId() == id){
-                return id;
+                return p;
             }
         }
         throw new ProductoNoEncontrado(id);
     }
 
-    public void actualizar(int id, Bouble precio, int stock){
+    public void actualizar(int id, double precio, int stock){
         Producto p = buscarPorId(id);
 
         p.setPrecio(precio);

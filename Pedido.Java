@@ -1,34 +1,55 @@
-public class Pedido{
+import java.util.ArrayList;
+
+public class Pedido {
+
     private static int contador = 1;
+
     private int idPedido;
+
     private ArrayList<LineaPedido> lineas;
-     
-    public Pedido(){
+
+    public Pedido() {
+
         this.idPedido = contador++;
-        this.lineas = ArrayList<>();
+        this.lineas = new ArrayList<>();
+        
+    }
+     
+    public void agregarLinea(LineaPedido linea) {
+
+        lineas.add(linea);
     }
 
-    public Bouble calcularTotal(){
-        
-        Bouble total; 
 
-        for (LineaPedido l: lineas){
+    public double calcularTotal() {
+
+        double total = 0;
+
+        for (LineaPedido l : lineas) {
+
             total += l.calcularSubTotal();
         }
-        return total;
-       }
 
-    public void mostrarPedido(){
-        System.out.println("Pedido: " + idPedido)
-        for(LineaPedido l: lineas){
+        return total;
+    }
+
+    public void mostrarPedido() {
+
+        System.out.println("Pedido: " + idPedido);
+
+        for (LineaPedido l : lineas) {
+
             System.out.println(
-                l.getProducto().getNombre()
-                        + "Cantidad: "
-                        + l.getCantidad()
-                        + "Subtotal: "
-                        +l.calcularSubTotal()
+                    l.getProducto().getNombre()
+                            + " Cantidad: "
+                            + l.getCantidad()
+                            + " Subtotal: "
+                            + l.calcularSubTotal()
             );
         }
-        System.out.println("TOTAL: " + l.calcularTotal());
+
+        System.out.println(
+                "TOTAL: " + calcularTotal()
+        );
     }
 }
