@@ -47,7 +47,7 @@ public class Producto{
      this.stock = stock;
    }
 
-   public void mostrarProducto{
+   public void mostrarProducto (){
     System.out.println("ID: " + id);
     System.out.println("Nombre: " + nombre);
     System.out.println("Precio: $" + precio);
