@@ -22,8 +22,7 @@ public class PedidoService {
 
             try {
 
-                Producto producto =
-                        productoService.buscarPorId(id);
+                Producto producto = productoService.buscarPorId(id);
 
                 System.out.println("Cantidad:");
                 int cantidad = scanner.nextInt();
