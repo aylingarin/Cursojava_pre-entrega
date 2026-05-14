@@ -47,11 +47,12 @@ public class Producto{
      this.stock = stock;
    }
 
-   public void mostrarProducto (){
-    System.out.println("ID: " + id);
-    System.out.println("Nombre: " + nombre);
-    System.out.println("Precio: $" + precio);
-    System.out.println("Stock: " + stock);
+   public String toString(){
+
+        return "ID: " + id
+            + "Nombre: " + nombre
+            + "Precio: $" + precio
+            + "Stock: " + stock;
    }
 
 
