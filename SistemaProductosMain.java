@@ -1,6 +1,6 @@
 import java.util.Scanner;  
 
-public class SistemaProductos {
+public class SistemaProductosMain {
 
     public static void main(String[] args) {
 
