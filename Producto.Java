@@ -49,10 +49,10 @@ public class Producto{
 
    public String toString(){
 
-        return "ID: " + id
-            + "Nombre: " + nombre
-            + "Precio: $" + precio
-            + "Stock: " + stock;
+        return "ID:" + id
+            + " Nombre:" + nombre
+            + " Precio:$" + precio
+            + " Stock:" + stock;
    }
 
 
